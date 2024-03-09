@@ -1,0 +1,9 @@
+.defaultContainerSize {
+  max-width: 1280px;
+}
+
+@media screen and (max-width: 1280px) {
+  .defaultContainerSize {
+    padding: 0em 0.75em;
+  }
+}
