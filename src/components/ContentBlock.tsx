@@ -22,7 +22,9 @@ const ContentBlock = ({ heading, reverseToggle, children, image }: Props) => {
         >
           <Box width={"100%"}>{image || "No Image"}</Box>
           <Box width={"100%"}>
-            <Heading mb={4}>{heading}</Heading>
+            <Heading mb={4} color={"purple.500"}>
+              {heading}
+            </Heading>
             <Text> {children}</Text>
           </Box>
         </Stack>

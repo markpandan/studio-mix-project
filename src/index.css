@@ -1,5 +1,18 @@
 .defaultContainerSize {
-  max-width: 1280px;
+  /* Default value provided in Chakra is 1280px. Unless, changed in theme.ts; */
+  max-width: var(--chakra-sizes-container-xl);
+}
+
+.bgProjectColorPrimary {
+  background-color: var(--chakra-colors-yellow-500);
+}
+
+.bgProjectColorSecondary {
+  background-color: var(--chakra-colors-purple-500);
+}
+
+.bgProjectColorTertiary {
+  background-color: var(--chakra-colors-red-500);
 }
 
 @media screen and (max-width: 1280px) {
