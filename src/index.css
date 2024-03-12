@@ -4,8 +4,15 @@
   }
 }
 
+.defaultContainerFormat {
+  max-width: var(--chakra-sizes-container-xl);
+  margin: auto;
+  padding-top: var(--chakra-space-14);
+  padding-bottom: var(--chakra-space-14);
+}
+
 @media screen and (max-width: 1280px) {
-  .defaultPaddingSize {
-    padding: 0em 0.75em;
+  .defaultContainerFormat {
+    padding: var(--chakra-space-14) var(--chakra-space-3);
   }
 }

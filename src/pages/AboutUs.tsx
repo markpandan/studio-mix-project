@@ -2,6 +2,7 @@ import { Text, Center } from "@chakra-ui/react";
 import ContentBlock from "../components/ContentBlock";
 import EmployeeBlock from "../components/EmployeeBlock";
 import ContentBlockVertical from "../components/ContentBlockVertical";
+import Jumbotron from "../components/Jumbotron";
 
 const AboutUs = () => {
   const family = [
@@ -19,11 +20,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <Center h={"300px"} bgColor={"gray.100"}>
-        <Text fontSize={"7xl"} fontWeight={"bold"} color={"purple.500"}>
-          ABOUT US
-        </Text>
-      </Center>
+      <Jumbotron>ABOUT US</Jumbotron>
       <ContentBlock heading="OUR JOURNEY" reverseToggle={false}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt

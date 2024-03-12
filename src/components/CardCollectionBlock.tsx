@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { Box, Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
 import "../index.css";
+import { projectColorSecondary, projectColorTertiary } from "../theme";
 
 interface Props {
   contents: { icon: IconType; heading: string; text: string }[];
@@ -12,8 +13,8 @@ const CardCollectionBlock = ({ contents }: Props) => {
 
   return (
     <>
-      <Box bgColor={"gray.50"} py={5}>
-        <Box className="defaultContainerSize" margin={"auto"}>
+      <Box bgColor={"gray.50"} py={14}>
+        <Box className="defaultContainerFormat" margin={"auto"}>
           <Grid
             templateColumns={{
               base: "1fr",
@@ -31,8 +32,14 @@ const CardCollectionBlock = ({ contents }: Props) => {
                 rowGap={4}
                 colSpan={index === contents.length - 1 ? lastCardElement : 1}
               >
-                <Icon as={content.icon}></Icon>
-                <Heading>{content.heading}</Heading>
+                <Icon
+                  as={content.icon}
+                  color={projectColorTertiary}
+                  boxSize={16}
+                ></Icon>
+                <Heading color={projectColorSecondary}>
+                  {content.heading}
+                </Heading>
                 <Text align={"center"}>{content.text}</Text>
               </GridItem>
             ))}

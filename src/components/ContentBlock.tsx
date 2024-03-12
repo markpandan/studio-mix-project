@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import "../index.css";
 
@@ -11,8 +11,8 @@ interface Props {
 
 const ContentBlock = ({ heading, reverseToggle, children, image }: Props) => {
   return (
-    <Box bgColor={"yellow.300"} py={5}>
-      <Box className="defaultContainerSize" margin={"auto"}>
+    <Box bgColor={"yellow.300"}>
+      <Box className="defaultContainerFormat" margin={"auto"}>
         <Stack
           direction={{
             base: "column",
@@ -20,8 +20,8 @@ const ContentBlock = ({ heading, reverseToggle, children, image }: Props) => {
           }}
           spacing={10}
         >
-          <Box width={"100%"}>{image || "No Image"}</Box>
-          <Box width={"100%"}>
+          <Skeleton height={"xs"} width={"2xl"} borderRadius={20} />
+          <Box width={"100%"} textAlign={reverseToggle ? "end" : "start"}>
             <Heading mb={4} color={"purple.500"}>
               {heading}
             </Heading>

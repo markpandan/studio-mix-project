@@ -9,12 +9,11 @@ const Navbar = () => {
 
   return (
     <Flex
-      className="defaultContainerSize"
+      className="defaultContainerFormat"
       as="nav"
       align="center"
       justify="space-between"
       wrap="wrap"
-      margin={"auto"}
       py={5}
     >
       <Circle size={"40px"} bgColor={"tomato"}></Circle>

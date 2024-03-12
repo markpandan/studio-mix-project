@@ -1,23 +1,23 @@
 import { Box } from "@chakra-ui/react";
-import "../index.css";
 import ContentBlock from "../components/ContentBlock";
 import CardCollectionBlock from "../components/CardCollectionBlock";
-import { MdSettings } from "react-icons/md";
+import { BsCardImage, BsCameraReels, BsBadgeHd } from "react-icons/bs";
+import "../index.css";
 
 const Home = () => {
   const cardContents = [
     {
-      icon: MdSettings,
+      icon: BsCardImage,
       heading: "Quality Pictures",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque.",
     },
     {
-      icon: MdSettings,
+      icon: BsCameraReels,
       heading: "Stunning Clarity",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque.",
     },
     {
-      icon: MdSettings,
+      icon: BsBadgeHd,
       heading: "High Definition",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque.",
     },
