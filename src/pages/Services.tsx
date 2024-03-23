@@ -1,17 +1,20 @@
 import { Button } from "@chakra-ui/react";
-import CardPhotoPricesBlock from "../components/CardPhotoPricesBlock";
+import PromoBlock from "../components/PromoBlock";
 import ContentBlock from "../components/ContentBlock";
 import Jumbotron from "../components/Jumbotron";
 import ProductBlock from "../components/ProductBlock";
+import ExtraBlock from "../components/ExtraBlock";
+import PrimaryButton from "../components/PrimaryButton";
 
 const Services = () => {
   return (
     <>
       <Jumbotron>SERVICES</Jumbotron>
-      <CardPhotoPricesBlock title="PHOTOGRAPH PROMOS"></CardPhotoPricesBlock>
+      <PromoBlock title="PHOTOGRAPH PROMOS"></PromoBlock>
       <ContentBlock
         heading={"We accept Painting request as well!"}
         reverseToggle={false}
+        primaryColor={false}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. At urna condimentum
@@ -20,19 +23,10 @@ const Services = () => {
         a pellentesque sit amet.
         <br />
         <br />
-        <Button
-          border={1}
-          borderColor="white"
-          borderRadius={10}
-          borderStyle="solid"
-          boxShadow={"3px 3px 10px rgba(0, 0, 0, 0.2)"}
-          colorScheme="red"
-          variant="solid"
-        >
-          Inquire Now
-        </Button>
+        <PrimaryButton>Inquire Now</PrimaryButton>
       </ContentBlock>
-      <ProductBlock></ProductBlock>
+      <ProductBlock />
+      <ExtraBlock />
     </>
   );
 };

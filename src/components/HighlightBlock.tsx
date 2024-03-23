@@ -8,7 +8,7 @@ interface Props {
 }
 
 // TODO: Does not support multiple cards. Only at 3 cards compatible.
-const CardCollectionBlock = ({ contents }: Props) => {
+const PromoBlock = ({ contents }: Props) => {
   const lastCardElement = { sm: 2, lg: 1 };
 
   return (
@@ -50,4 +50,4 @@ const CardCollectionBlock = ({ contents }: Props) => {
   );
 };
 
-export default CardCollectionBlock;
+export default PromoBlock;

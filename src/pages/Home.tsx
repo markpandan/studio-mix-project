@@ -1,7 +1,7 @@
+import { BsCardImage, BsCameraReels, BsBadgeHd } from "react-icons/bs";
 import { Box } from "@chakra-ui/react";
 import ContentBlock from "../components/ContentBlock";
-import CardCollectionBlock from "../components/CardCollectionBlock";
-import { BsCardImage, BsCameraReels, BsBadgeHd } from "react-icons/bs";
+import PromoBlock from "../components/HighlightBlock";
 import "../index.css";
 
 const Home = () => {
@@ -40,7 +40,7 @@ const Home = () => {
         tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor
         eget dolor morbi. Feugiat nisl pretium fusce id velit.
       </ContentBlock>
-      <CardCollectionBlock contents={cardContents} />
+      <PromoBlock contents={cardContents} />
       <ContentBlock
         heading="CAPTURE YOUR MOMENTS WITH US NOW!"
         reverseToggle={true}

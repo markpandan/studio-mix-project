@@ -1,18 +1,22 @@
-import { ReactNode, useEffect } from "react";
-import { Center, Text } from "@chakra-ui/react";
+import { Center, Heading } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import { projectColorSecondary } from "../theme";
 
 interface Props {
-  children: ReactNode;
+  children: string;
   image?: string;
 }
 
 const Jumbotron = ({ children }: Props) => {
   return (
     <Center h={"300px"} bgColor={"gray.100"}>
-      <Text fontSize={"7xl"} fontWeight={"bold"} color={projectColorSecondary}>
-        {children}
-      </Text>
+      <Heading
+        fontSize={["5xl", "7xl"]}
+        fontWeight={"bold"}
+        color={projectColorSecondary}
+      >
+        {children.toUpperCase()}
+      </Heading>
     </Center>
   );
 };

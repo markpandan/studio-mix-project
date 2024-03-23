@@ -1,18 +1,26 @@
 import { Box, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { projectColorPrimary } from "../theme";
 import "../index.css";
 
 interface Props {
+  children: ReactNode;
   heading: string;
   reverseToggle: boolean;
-  children: ReactNode;
+  primaryColor?: boolean;
   image?: string;
 }
 
-const ContentBlock = ({ heading, reverseToggle, children, image }: Props) => {
+const ContentBlock = ({
+  children,
+  heading,
+  reverseToggle,
+  primaryColor = true,
+  image,
+}: Props) => {
   return (
-    <Box bgColor={"yellow.300"}>
-      <Box className="defaultContainerFormat" margin={"auto"}>
+    <Box bgColor={primaryColor ? projectColorPrimary : "gray.100"}>
+      <Box className="defaultContainerFormat">
         <Stack
           direction={{
             base: "column",

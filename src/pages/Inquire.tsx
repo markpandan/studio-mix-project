@@ -14,15 +14,13 @@ import {
   projectColorSecondary,
   projectColorTertiary,
 } from "../theme";
+import Jumbotron from "../components/Jumbotron";
 
+// TODO: Make a Placeholder first while the iframe is not avaialable yet
 const Inquire = () => {
   return (
     <>
-      <Center h={"300px"} bgColor={"gray.100"}>
-        <Text fontSize={"7xl"} fontWeight={"bold"} color={"purple.500"}>
-          INQUIRE
-        </Text>
-      </Center>
+      <Jumbotron>INQUIRE</Jumbotron>
       <Box bgColor={projectColorPrimary}>
         <VStack spacing={5} maxW={defaultContainerSize} margin={"auto"} py={5}>
           <Heading color={projectColorSecondary} alignSelf={"start"}>
