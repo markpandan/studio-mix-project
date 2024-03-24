@@ -1,28 +1,22 @@
-import { useState } from "react";
 import { Box, HStack } from "@chakra-ui/react";
 import { projectColorTertiary } from "../../theme";
 
 interface Props {
   select: number;
-  amount: number;
   size: number;
+  onClick: (index: number) => void;
 }
 
-const CarouselIndicators = () => {
-  const [selectedBox, setSelectedBox] = useState<number | null>(null);
-  const handleClick = (index: number) => {
-    setSelectedBox(index);
-  };
-
+const CarouselIndicators = ({ select, size, onClick }: Props) => {
   return (
     <HStack alignSelf={"center"}>
-      {[...Array(4)].map((_, index) => (
+      {[...Array(size)].map((_, index) => (
         <Box
           key={index}
-          bgColor={selectedBox === index ? projectColorTertiary : "gray.200"}
+          bgColor={select === index ? projectColorTertiary : "gray.200"}
           width={8}
           height={2}
-          onClick={() => handleClick(index)}
+          onClick={() => onClick(index)}
         />
       ))}
     </HStack>

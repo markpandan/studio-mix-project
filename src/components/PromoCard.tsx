@@ -2,7 +2,6 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Flex,
   Heading,
   Text,
   theme,
@@ -23,10 +22,13 @@ const PromoCard = ({ title, pieces, price }: Props) => {
   const spacing = theme.space[5];
   return (
     <Card
-      flexBasis={`calc(33% - ${spacing})`}
+      flexBasis={{ sm: `calc(33% - ${spacing})` }}
       borderTop={7}
       borderColor={projectColorTertiary}
       borderStyle={"solid"}
+      borderRadius={20}
+      boxShadow={"3px 3px 10px rgba(0, 0, 0, 0.5)"}
+      px={[0, 5]}
     >
       <CardHeader color={projectColorSecondary} textAlign={"center"}>
         <Heading color={projectColorSecondary}>{title}</Heading>
@@ -42,9 +44,10 @@ const PromoCard = ({ title, pieces, price }: Props) => {
         {pieces.map((piece, index) => (
           <Text
             key={index}
-            fontWeight={"extrabold"}
+            fontWeight={"black"}
             fontSize={"5xl"}
             color={projectColorTertiary}
+            textAlign={"center"}
           >
             {`${piece} `}
             <Text

@@ -8,7 +8,11 @@ import {
   VStack,
   useTheme,
 } from "@chakra-ui/react";
-import { projectColorSecondary, projectColorTertiary } from "../theme";
+import {
+  defaultCardShadow,
+  projectColorSecondary,
+  projectColorTertiary,
+} from "../theme";
 
 interface Props {
   item: string;
@@ -36,11 +40,17 @@ const ProductCard = ({ item, price, image }: Props) => {
           _even={{
             marginX: spacing,
           }}
+          shadow={defaultCardShadow}
+          borderRadius={20}
         >
-          <CardHeader>{!image && <Skeleton height={20} />}</CardHeader>
+          <CardHeader>
+            {!image && <Skeleton height={40} borderRadius={18} />}
+          </CardHeader>
           <CardBody>
             <VStack>
-              <Heading color={projectColorSecondary}>{item}</Heading>
+              <Heading fontSize={"2xl"} color={projectColorSecondary}>
+                {item}
+              </Heading>
               <Heading color={projectColorTertiary}>₱{price}</Heading>
             </VStack>
           </CardBody>

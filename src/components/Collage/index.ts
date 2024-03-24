@@ -1,3 +1,3 @@
-import Collage from "./Collage";
+import CollageBlock from "./CollageBlock";
 
-export default Collage;
+export default CollageBlock;
