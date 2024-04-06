@@ -1,5 +1,5 @@
-import { Box, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { Box, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { projectColorPrimary } from "../theme";
 import "../index.css";
 

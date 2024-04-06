@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import "./carousel.css";
 
 interface Props {
@@ -6,16 +6,25 @@ interface Props {
 }
 
 const CarouselImages = ({ activeIndex }: Props) => {
+  const images = [
+    "src/assets/painting_1.jpg",
+    "src/assets/painting_2.jpg",
+    "src/assets/painting_3.jpg",
+    "src/assets/painting_4.jpg",
+  ];
+
   return (
     <Box position={"absolute"} width={"100%"} height={"100%"}>
-      {["green", "red", "yellow", "blue"].map((color, index) => (
-        <Box
+      {images.map((image, index) => (
+        <Image
           key={index}
-          className="fade"
-          backgroundColor={color}
+          src={image}
+          className={"fade"}
+          fit={"cover"}
+          width={"100%"}
           height={"100%"}
           display={index === activeIndex ? "active" : "none"}
-        ></Box>
+        ></Image>
       ))}
     </Box>
   );

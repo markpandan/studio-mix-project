@@ -1,17 +1,19 @@
-import { Box, Button, Flex, HStack, Icon } from "@chakra-ui/react";
+import { Box, Flex, HStack } from "@chakra-ui/react";
 import { useState } from "react";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { projectColorPrimary } from "../../theme";
+import CarouselButton from "./CarouselButton";
 import CarouselDescriptions from "./CarouselDescriptions";
 import CarouselImages from "./CarouselImages";
 import "./carousel.css";
 
-interface Prop {
-  children: React.ReactNode;
-}
+// interface Prop {
+//   children: React.ReactNode;
+// }
 
-// TODO: Learn more about the efficient state components in React 18 by Mosh Hamedani next time. To avoid the prop drilling scenario here.
+// TODO: Learn more about the efficient state and hook components in React 18 by Mosh Hamedani next time. To avoid the prop drilling scenario here.
 const Carousel = () => {
+  // Size variable must depend on the amount of images assigned in the "highlight" database
   const size = 4;
   const [active, setActive] = useState<number>(1);
   const handleClick = (index: number) => {
@@ -41,20 +43,14 @@ const Carousel = () => {
             padding={5}
             backgroundColor={"transparent"}
           >
-            <Button
-              bgColor={"transparent"}
+            <CarouselButton
+              as={BsChevronLeft}
               onClick={() => handleClick(active - 1)}
-              _hover={{}}
-            >
-              <Icon as={BsArrowLeft} />
-            </Button>
-            <Button
-              bgColor={"transparent"}
+            />
+            <CarouselButton
+              as={BsChevronRight}
               onClick={() => handleClick(active + 1)}
-              _hover={{}}
-            >
-              <Icon as={BsArrowRight} />
-            </Button>
+            />
           </HStack>
 
           <CarouselDescriptions

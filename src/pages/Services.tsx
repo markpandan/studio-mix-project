@@ -1,10 +1,10 @@
-import { Button } from "@chakra-ui/react";
-import PromoBlock from "../components/PromoBlock";
+import { Link } from "react-router-dom";
 import ContentBlock from "../components/ContentBlock";
-import Jumbotron from "../components/Jumbotron";
-import ProductBlock from "../components/ProductBlock";
 import ExtraBlock from "../components/ExtraBlock";
+import Jumbotron from "../components/Jumbotron";
 import PrimaryButton from "../components/PrimaryButton";
+import ProductBlock from "../components/ProductBlock";
+import PromoBlock from "../components/PromoBlock";
 
 const Services = () => {
   return (
@@ -23,7 +23,9 @@ const Services = () => {
         a pellentesque sit amet.
         <br />
         <br />
-        <PrimaryButton>Inquire Now</PrimaryButton>
+        <Link to="/inquire">
+          <PrimaryButton>Inquire Now</PrimaryButton>
+        </Link>
       </ContentBlock>
       <ProductBlock />
       <ExtraBlock />
