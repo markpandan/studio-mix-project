@@ -1,5 +1,5 @@
-import { Box, Image } from "@chakra-ui/react";
-import CollageCardDetails from "./CollageCardDetails";
+import { Badge, Box, HStack, Heading, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 // interface ProposedProps {
 //   index: { key: number; hoverKey: number };
@@ -11,12 +11,20 @@ import CollageCardDetails from "./CollageCardDetails";
 interface Props {
   index: number;
   height: string;
+  image: string;
   hoverIndex: number;
   setHoverIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const CollageCard = ({ index, height, hoverIndex, setHoverIndex }: Props) => {
-  const image = "src/assets/painting_1.jpg";
+// TODO: Descale the images first. While in that event, place a Skeleton component as a placeholder first.
+const CollageCard = ({
+  image,
+  index,
+  height,
+  hoverIndex,
+  setHoverIndex,
+}: Props) => {
+  const navigate = useNavigate();
   return (
     <Box
       display={"flex"}
@@ -27,6 +35,7 @@ const CollageCard = ({ index, height, hoverIndex, setHoverIndex }: Props) => {
         transform: "scale(1.05)",
         transition: "transform .15s ease-in",
       }}
+      onClick={() => navigate("/post")}
       onMouseEnter={() => setHoverIndex(index)}
       onMouseLeave={() => setHoverIndex(-1)}
       background={image}
@@ -41,7 +50,28 @@ const CollageCard = ({ index, height, hoverIndex, setHoverIndex }: Props) => {
         width={"100%"}
         objectFit={"cover"}
       />
-      <CollageCardDetails index={index} hoverIndex={hoverIndex} />
+      <Box
+        bottom={0}
+        width="100%"
+        height="75px"
+        backgroundColor={"whiteAlpha.400"}
+        transform={index == hoverIndex ? "translateY(0)" : "translateY(100%)"}
+        transition="transform .45s ease-out"
+        paddingX={[2, 4]}
+        paddingY={2}
+      >
+        <HStack>
+          <Badge variant="subtle" colorScheme="green">
+            Art
+          </Badge>
+          <Badge variant="subtle" colorScheme="cyan">
+            Scenery
+          </Badge>
+        </HStack>
+        <Heading mt={1} size={"md"}>
+          The Bread and The Girl
+        </Heading>
+      </Box>
     </Box>
   );
 };

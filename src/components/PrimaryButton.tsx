@@ -1,9 +1,9 @@
-import { Button } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { Button } from "@chakra-ui/react";
 import { buttonFont } from "../theme";
 
 interface Props {
-  children: string;
+  children: ReactNode;
 }
 
 const PrimaryButton = ({ children }: Props) => {

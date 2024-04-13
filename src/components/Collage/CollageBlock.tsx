@@ -4,15 +4,17 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "../../index.css";
 import { projectColorPrimary, projectColorSecondary } from "../../theme";
 import CollageCard from "./CollageCard";
+import dbImage from "../../db/dbImage.json";
 
 const CollageBlock = () => {
   const randHeight = ["200px", "240px", "280px", "320px"];
   const [heights, setHeights] = useState<string[]>([]);
   const [hoverIndex, setHoverIndex] = useState<number>(-1);
 
+  // Randomize the heights of the images
   useEffect(() => {
     setHeights(
-      Array(15)
+      Array(dbImage.Images.length)
         .fill(null)
         .map(
           () =>
@@ -21,6 +23,8 @@ const CollageBlock = () => {
             ]
         )
     );
+
+    console.log(dbImage);
   }, []);
 
   return (
@@ -36,6 +40,7 @@ const CollageBlock = () => {
                 key={index}
                 index={index}
                 height={height}
+                image={dbImage.Images[index].src}
                 hoverIndex={hoverIndex}
                 setHoverIndex={setHoverIndex}
               />

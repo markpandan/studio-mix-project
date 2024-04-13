@@ -6,6 +6,7 @@ import CarouselButton from "./CarouselButton";
 import CarouselDescriptions from "./CarouselDescriptions";
 import CarouselImages from "./CarouselImages";
 import "./carousel.css";
+import usePageCounter from "../../hooks/usePageCounter";
 
 // interface Prop {
 //   children: React.ReactNode;
@@ -15,12 +16,7 @@ import "./carousel.css";
 const Carousel = () => {
   // Size variable must depend on the amount of images assigned in the "highlight" database
   const size = 4;
-  const [active, setActive] = useState<number>(1);
-  const handleClick = (index: number) => {
-    if (index < 0) setActive(size - 1);
-    else if (index > size - 1) setActive(0);
-    else setActive(index);
-  };
+  const { active, handlePages: setActive } = usePageCounter(size);
 
   return (
     <Box bgColor={projectColorPrimary}>
@@ -28,7 +24,7 @@ const Carousel = () => {
         <Flex
           position={"relative"}
           borderRadius={20}
-          height={"400px"}
+          height={"525px"}
           overflow={"hidden"}
           direction={"column"}
           justifyContent={"end"}
@@ -45,18 +41,18 @@ const Carousel = () => {
           >
             <CarouselButton
               as={BsChevronLeft}
-              onClick={() => handleClick(active - 1)}
+              onClick={() => setActive(active - 1)}
             />
             <CarouselButton
               as={BsChevronRight}
-              onClick={() => handleClick(active + 1)}
+              onClick={() => setActive(active + 1)}
             />
           </HStack>
 
           <CarouselDescriptions
             activeIndex={active}
             size={size}
-            handleClick={(index) => handleClick(index)}
+            handleClick={(index) => setActive(index)}
           ></CarouselDescriptions>
         </Flex>
       </Box>

@@ -24,7 +24,7 @@ const CarouselImages = ({ activeIndex }: Props) => {
           width={"100%"}
           height={"100%"}
           display={index === activeIndex ? "active" : "none"}
-        ></Image>
+        />
       ))}
     </Box>
   );

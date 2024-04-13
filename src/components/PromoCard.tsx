@@ -30,14 +30,18 @@ const PromoCard = ({ title, pieces, price }: Props) => {
       boxShadow={"3px 3px 10px rgba(0, 0, 0, 0.5)"}
       px={[0, 5]}
     >
-      <CardHeader color={projectColorSecondary} textAlign={"center"}>
+      <CardHeader
+        color={projectColorSecondary}
+        textAlign={"center"}
+        padding={3}
+      >
         <Heading color={projectColorSecondary}>{title}</Heading>
       </CardHeader>
-      <CardBody>
+      <CardBody padding={3}>
         <Text
           color={projectColorSecondary}
           fontWeight={"semibold"}
-          fontSize={"xl"}
+          fontSize={"2xl"}
         >
           Includes:
         </Text>
@@ -53,7 +57,7 @@ const PromoCard = ({ title, pieces, price }: Props) => {
             <Text
               as={"span"}
               fontWeight={"normal"}
-              fontSize={"lg"}
+              fontSize={"2xl"}
               color={"black"}
             >
               &nbsp; pcs of {inclusions[index]} picture

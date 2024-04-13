@@ -6,6 +6,48 @@
       "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
       "artist": "Zaldy Cuevas",
       "src": "src/assets/painting_1.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Lorem Ipsum",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Lorem Ipsum",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_3.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Lorem Ipsum",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lorem Ipsum",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_5.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lorem Ipsum",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_6.jpg"
+    },
+    {
+      "id": 6,
+      "name": "The Bread and The Girl",
+      "description": "Minecraft is a sandbox video game developed and published by Mojang. The game was created by Markus 'Notch' Persson in the Java programming language. Following several early test versions, it was released as a paid public alpha for personal computers in 2009 before releasing in November 2011, with Jens Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with 200 million copies sold and 126 million monthly active users as of 2020.",
+      "artist": "Zaldy Cuevas",
+      "src": "src/assets/painting_7.jpg"
     }
   ]
 }
