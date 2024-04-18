@@ -1,0 +1,9 @@
+{
+    "Genres": [
+        { "tag": "Art", "color": "blue" },
+        { "tag": "Scenery", "color": "green" },
+        { "tag": "Nature", "color": "red" },
+        { "tag": "Food", "color": "orange" },
+        { "tag": "Other", "color": "gray" }
+    ]
+}

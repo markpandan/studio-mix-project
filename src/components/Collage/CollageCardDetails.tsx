@@ -5,6 +5,7 @@ interface Props {
   hoverIndex: number;
 }
 
+// NOTICE: Deprecated
 // TODO: Maybe add a share function next time
 const CollageCardDetails = ({ index, hoverIndex }: Props) => {
   return (
