@@ -22,9 +22,9 @@ interface Props {
 // TODO: Descale the images first. While in that event, place a Skeleton component as a placeholder first.
 // TODO: De-nest the genres array variable
 const CollageCard = ({
-   image,
    index,
    height,
+   image,
    hoverIndex,
    setHoverIndex,
 }: Props) => {
@@ -39,10 +39,9 @@ const CollageCard = ({
             transform: "scale(1.05)",
             transition: "transform .15s ease-in",
          }}
-         onClick={() => navigate("/post")}
+         onClick={() => navigate(`/post/${index}`)}
          onMouseEnter={() => setHoverIndex(index)}
          onMouseLeave={() => setHoverIndex(-1)}
-         background={image.src}
          borderRadius={10}
          height={height}
          overflow={"hidden"}
@@ -50,9 +49,11 @@ const CollageCard = ({
          <Image
             position="absolute"
             src={image.src}
-            height={"100%"}
-            width={"100%"}
+            height={"450px"}
+            width={"450px"}
             objectFit={"cover"}
+            loading="lazy"
+            alt={`Picture ${index}`}
          />
          <Box
             bottom={0}

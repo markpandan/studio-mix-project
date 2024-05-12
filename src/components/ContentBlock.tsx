@@ -28,7 +28,7 @@ const ContentBlock = ({
                }}
                spacing={10}
             >
-               <Skeleton height={"xs"} width={"2xl"} borderRadius={20} />
+               <Skeleton height={"xs"} width={"100%"} borderRadius={20} />
                <Box width={"100%"} textAlign={reverseToggle ? "end" : "start"}>
                   <Heading mb={4} color={"purple.500"}>
                      {heading}

@@ -1,12 +1,24 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Pagination from "../components/Pagination";
 import ProductCard from "../components/ProductCard";
-import { defaultContainerSize, projectColorPrimary } from "../theme";
 import { products } from "../helpers/getdb";
+import { productObj } from "../helpers/types";
+import { defaultContainerSize, projectColorPrimary } from "../theme";
+
+const count = products.length;
+const limit = 8;
 
 const Products = () => {
-   // Make a hook in here to count the paginations
+   const [page, setPage] = useState(0);
+   const pages = Math.ceil(count / limit);
+
+   const [displayedProducts, setDisplayedProducts] = useState<productObj[]>([]);
+
+   useEffect(() => {
+      setDisplayedProducts(products.slice(page * limit, (page + 1) * limit));
+   }, [page]);
 
    return (
       <>
@@ -20,15 +32,16 @@ const Products = () => {
                py={[5, 10]}
             >
                <SimpleGrid columns={[1, 2, 4]} spacing={5}>
-                  {[...Array(products.length)].map((_, i) => (
+                  {displayedProducts.map((item, i) => (
                      <ProductCard
                         key={i}
-                        item={products[i].name}
-                        price={products[i].price}
+                        item={item.name}
+                        price={item.price}
+                        image="src\assets\placeholder.png"
                      />
                   ))}
                </SimpleGrid>
-               <Pagination count={8} />
+               <Pagination pages={pages} action={(value) => setPage(value)} />
             </VStack>
          </Box>
       </>

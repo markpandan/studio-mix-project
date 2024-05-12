@@ -19,4 +19,6 @@ export const theme = extendTheme({
   },
 });
 
+export const webLogoSrc = "src/assets/studio_mix_logo.svg";
+
 export default theme;

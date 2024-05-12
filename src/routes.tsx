@@ -9,19 +9,19 @@ import Post from "./pages/Post";
 import Products from "./pages/Products";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "services", element: <Services /> },
-      { path: "gallery", element: <Gallery /> },
-      { path: "aboutus", element: <AboutUs /> },
-      { path: "inquire", element: <Inquire /> },
-      { path: "post", element: <Post /> },
-      { path: "products", element: <Products /> },
-    ],
-  },
+   {
+      path: "/",
+      element: <Layout />,
+      children: [
+         { index: true, element: <Home /> },
+         { path: "services", element: <Services /> },
+         { path: "gallery", element: <Gallery /> },
+         { path: "aboutus", element: <AboutUs /> },
+         { path: "inquire", element: <Inquire /> },
+         { path: "post/:id", element: <Post /> },
+         { path: "products", element: <Products /> },
+      ],
+   },
 ]);
 
 export default router;

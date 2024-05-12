@@ -12,14 +12,9 @@ import {
    projectColorSecondary,
    projectColorTertiary,
 } from "../theme";
+import { Props } from "./ProductCard";
 
-interface Props {
-   item: string;
-   price: number;
-   image?: string;
-}
-
-const ProductCard = ({ item, price, image }: Props) => {
+export const ProductCard = ({ item, price, image }: Props) => {
    return (
       <Card shadow={defaultCardShadow} borderRadius={20}>
          <CardHeader>
@@ -45,5 +40,3 @@ const ProductCard = ({ item, price, image }: Props) => {
       </Card>
    );
 };
-
-export default ProductCard;

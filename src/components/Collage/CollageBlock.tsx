@@ -6,6 +6,7 @@ import { projectColorPrimary, projectColorSecondary } from "../../theme";
 import CollageCard from "./CollageCard";
 import { images } from "../../helpers/getdb";
 
+// TODO: Populate the Collage with more pictures.
 const CollageBlock = () => {
    const randHeight = ["200px", "240px", "280px", "320px"];
    const [heights, setHeights] = useState<string[]>([]);
