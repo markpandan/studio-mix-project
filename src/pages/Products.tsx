@@ -1,11 +1,15 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import Jumbotron from "../components/Jumbotron";
+import Jumbotron from "../components/SubJumbotron";
 import Pagination from "../components/Pagination";
 import ProductCard from "../components/ProductCard";
 import { products } from "../helpers/getdb";
 import { productObj } from "../helpers/types";
-import { defaultContainerSize, projectColorPrimary } from "../theme";
+import {
+   defaultContainerSize,
+   projectColorPrimary,
+   jumbotronBackground_1,
+} from "../theme";
 
 const count = products.length;
 const limit = 8;
@@ -22,7 +26,7 @@ const Products = () => {
 
    return (
       <>
-         <Jumbotron>Products</Jumbotron>
+         <Jumbotron image={jumbotronBackground_1}>Products</Jumbotron>
          <Box bgColor={projectColorPrimary}>
             <VStack
                maxW={defaultContainerSize}

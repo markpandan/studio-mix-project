@@ -12,11 +12,13 @@ export const projectColorTertiary = "red.500";
 
 export const buttonFont = "'Alatsi', sans-serif";
 
+export const jumbotronBackground_1 = "src/assets/jumbotron_image.jpg";
+
 export const theme = extendTheme({
-  fonts: {
-    heading: `'Archivo Black', sans-serif`,
-    body: `'Archivo', sans-serif`,
-  },
+   fonts: {
+      heading: `'Archivo Black', sans-serif`,
+      body: `'Archivo', sans-serif`,
+   },
 });
 
 export const webLogoSrc = "src/assets/studio_mix_logo.svg";

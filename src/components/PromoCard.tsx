@@ -1,11 +1,4 @@
-import {
-   Card,
-   CardBody,
-   CardHeader,
-   Heading,
-   Text,
-   theme,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Heading, Text } from "@chakra-ui/react";
 import { projectColorSecondary, projectColorTertiary } from "../theme";
 
 interface Props {
@@ -35,7 +28,10 @@ const PromoCard = ({ title, pieces, price }: Props) => {
             textAlign={"center"}
             padding={[3, 1]}
          >
-            <Heading fontSize={{ md: "2xl" }} color={projectColorSecondary}>
+            <Heading
+               fontSize={{ xl: "4xl", md: "2xl" }}
+               color={projectColorSecondary}
+            >
                {title}
             </Heading>
          </CardHeader>
