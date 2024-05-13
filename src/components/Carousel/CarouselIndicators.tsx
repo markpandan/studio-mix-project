@@ -9,13 +9,13 @@ interface Props {
 
 const CarouselIndicators = ({ select, size, onClick }: Props) => {
    return (
-      <HStack alignSelf={"center"}>
+      <HStack alignSelf={"center"} marginTop={2} marginBottom={2}>
          {[...Array(size)].map((_, index) => (
             <Box
                key={index}
                bgColor={select === index ? projectColorTertiary : "gray.200"}
                width={8}
-               height={2}
+               height={1}
                onClick={() => onClick(index)}
             />
          ))}

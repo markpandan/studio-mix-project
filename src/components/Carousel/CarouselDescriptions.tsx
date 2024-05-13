@@ -14,18 +14,18 @@ const CarouselDescriptions = ({ activeIndex, size, handleClick }: Props) => {
          borderTop={"2px solid"}
          borderColor={projectColorTertiary}
          alignItems={"start"}
-         height={"130px"}
          bgColor={"gray.300"}
-         paddingX={4}
-         paddingY={2}
-         opacity={0.8}
-         spacing={4}
+         paddingX={10}
+         opacity={0.6}
+         gap={0}
       >
-         <Heading>Lorem Ipsum</Heading>
-         <Text>
+         <Text fontSize={"2xl"} fontWeight={"800"}>
+            Lorem Ipsum
+         </Text>
+         <Text fontSize={"md"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Potenti
-            nullam ac tortor{" "}
+            nullam ac tortor
          </Text>
          <CarouselIndicators
             select={activeIndex}

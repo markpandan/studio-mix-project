@@ -6,6 +6,7 @@ import CarouselButton from "./CarouselButton";
 import CarouselDescriptions from "./CarouselDescriptions";
 import CarouselImages from "./CarouselImages";
 import "./carousel.css";
+import { useState } from "react";
 
 // interface Prop {
 //   children: React.ReactNode;
@@ -16,6 +17,7 @@ const Carousel = () => {
    // Size variable must depend on the amount of images assigned in the "highlight" database
    const size = 4;
    const { active, handlePages: setActive } = usePageCounter(size);
+   const [isHover, handleHover] = useState(false);
 
    return (
       <Box bgColor={projectColorPrimary}>

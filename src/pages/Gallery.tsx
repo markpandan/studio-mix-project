@@ -9,8 +9,8 @@ const Gallery = () => {
          <SubJumbotron image="src/assets/jumbotron_image.jpg">
             GALLERY
          </SubJumbotron>
-         <Carousel></Carousel>
-         <CollageBlock></CollageBlock>
+         <Carousel />
+         <CollageBlock />
       </>
    );
 };

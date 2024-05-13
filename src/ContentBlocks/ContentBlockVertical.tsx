@@ -2,6 +2,7 @@ import { Box, Heading, Image, Skeleton, Text, VStack } from "@chakra-ui/react";
 import { defaultContainerSize, projectColorPrimary } from "../theme";
 import Props from "./props";
 
+// NOTE: reverseToggle parameter is not working for now.
 const ContentBlockVertical = ({
    children,
    heading,
@@ -26,6 +27,7 @@ const ContentBlockVertical = ({
                      borderRadius={20}
                      src={image.src}
                      alt={image.alt}
+                     objectFit={"cover"}
                   />
                ) : (
                   <Skeleton height={"xs"} width={"100%"} borderRadius={20} />

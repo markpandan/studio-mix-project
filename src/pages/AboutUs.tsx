@@ -39,7 +39,13 @@ const AboutUs = () => {
             porttitor eget dolor morbi. Feugiat nisl pretium fusce id velit.
          </ContentBlock>
          <EmployeeBlock family={family} />
-         <ContentBlockVertical heading="WE STRIVE TO BECOME THE BEST!">
+         <ContentBlockVertical
+            heading="WE STRIVE TO BECOME THE BEST!"
+            image={{
+               src: "src/assets/work_party_image.jpg",
+               alt: "Work Party Image",
+            }}
+         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
             tincidunt arcu non sodales neque.

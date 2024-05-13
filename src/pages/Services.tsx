@@ -11,11 +11,15 @@ const Services = () => {
    return (
       <>
          <SubJumbotron image={jumbotronBackground_1}>SERVICES</SubJumbotron>
-         <PromoBlock title="PHOTOGRAPH PROMOS"></PromoBlock>
+         <PromoBlock title="PHOTOGRAPH PROMOS" />
          <ContentBlock
             heading={"We accept Painting request as well!"}
             reverseToggle={false}
             primaryColor={false}
+            image={{
+               src: "src/assets/painting_image.jpg",
+               alt: "Painting Image",
+            }}
          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna

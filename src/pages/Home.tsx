@@ -40,6 +40,10 @@ const Home = () => {
          <ContentBlock
             heading="WE PRODUCE MEMORY LASTING IMAGES!"
             reverseToggle={false}
+            image={{
+               src: "src/assets/photo_paper_image.jpg",
+               alt: "Photo Paper Image",
+            }}
          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
@@ -54,6 +58,10 @@ const Home = () => {
          <ContentBlock
             heading="CAPTURE YOUR MOMENTS WITH US NOW!"
             reverseToggle={true}
+            image={{
+               src: "src/assets/capture_image.png",
+               alt: "Capture Image",
+            }}
          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices

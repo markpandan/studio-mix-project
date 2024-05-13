@@ -27,6 +27,7 @@ const ContentBlock = ({
                      borderRadius={20}
                      src={image.src}
                      alt={image.alt}
+                     objectFit={"cover"}
                   />
                ) : (
                   <Skeleton height={"xs"} width={"100%"} borderRadius={20} />

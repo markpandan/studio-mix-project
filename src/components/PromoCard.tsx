@@ -39,7 +39,7 @@ const PromoCard = ({ title, pieces, price }: Props) => {
             <Text
                color={projectColorSecondary}
                fontWeight={"semibold"}
-               fontSize={["2xl", "xl", "md"]}
+               fontSize={["md", "xl", "2xl"]}
             >
                Includes:
             </Text>
@@ -55,7 +55,7 @@ const PromoCard = ({ title, pieces, price }: Props) => {
                   <Text
                      as={"span"}
                      fontWeight={"normal"}
-                     fontSize={["2xl", "lg"]}
+                     fontSize={["lg", "2xl"]}
                      color={"black"}
                   >
                      &nbsp; pcs of {inclusions[index]} picture
