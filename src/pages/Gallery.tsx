@@ -1,11 +1,14 @@
-import Jumbotron from "../components/SubJumbotron";
+import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 import Carousel from "../components/Carousel";
 import CollageBlock from "../components/Collage";
 
+// TODO: Make the images loaded to be "lazy", non-blocking or make their resolutions smaller for faster rendering.
 const Gallery = () => {
    return (
       <>
-         <Jumbotron image="src/assets/jumbotron_image.jpg">GALLERY</Jumbotron>
+         <SubJumbotron image="src/assets/jumbotron_image.jpg">
+            GALLERY
+         </SubJumbotron>
          <Carousel></Carousel>
          <CollageBlock></CollageBlock>
       </>

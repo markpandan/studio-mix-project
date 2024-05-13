@@ -1,15 +1,7 @@
-import { Box, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
-import { ReactNode } from "react";
-import "../index.css";
+import { Box, Heading, Image, Skeleton, Stack, Text } from "@chakra-ui/react";
 import { projectColorPrimary } from "../theme";
-
-interface Props {
-   children: ReactNode;
-   heading: string;
-   reverseToggle: boolean;
-   primaryColor?: boolean;
-   image?: string;
-}
+import Props from "./props";
+import "../index.css";
 
 const ContentBlock = ({
    children,
@@ -28,7 +20,17 @@ const ContentBlock = ({
                }}
                spacing={10}
             >
-               <Skeleton height={"xs"} width={"100%"} borderRadius={20} />
+               {image ? (
+                  <Image
+                     h={"xs"}
+                     width={"100%"}
+                     borderRadius={20}
+                     src={image.src}
+                     alt={image.alt}
+                  />
+               ) : (
+                  <Skeleton height={"xs"} width={"100%"} borderRadius={20} />
+               )}
                <Box width={"100%"} textAlign={reverseToggle ? "end" : "start"}>
                   <Heading mb={4} color={"purple.500"}>
                      {heading}

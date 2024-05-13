@@ -1,6 +1,6 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import Jumbotron from "../components/SubJumbotron";
+import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 import Pagination from "../components/Pagination";
 import ProductCard from "../components/ProductCard";
 import { products } from "../helpers/getdb";
@@ -26,7 +26,7 @@ const Products = () => {
 
    return (
       <>
-         <Jumbotron image={jumbotronBackground_1}>Products</Jumbotron>
+         <SubJumbotron image={jumbotronBackground_1}>Products</SubJumbotron>
          <Box bgColor={projectColorPrimary}>
             <VStack
                maxW={defaultContainerSize}

@@ -1,12 +1,12 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
-import { projectColorSecondary } from "../theme";
+import { projectColorSecondary } from "../../theme";
 
 interface Props {
    children: string;
    image?: string;
 }
 
-const Jumbotron = ({ children, image }: Props) => {
+const SubJumbotron = ({ children, image }: Props) => {
    return (
       <Box position={"relative"}>
          <Image
@@ -16,8 +16,11 @@ const Jumbotron = ({ children, image }: Props) => {
             filter={"blur(8px)"}
             objectFit={"cover"}
             opacity={0.5}
+            alt={"Studio Mix Wallpaper"}
          />
          <Heading
+            w={"100%"}
+            textAlign={"center"}
             fontSize={["5xl", "7xl"]}
             fontWeight={"bold"}
             color={projectColorSecondary}
@@ -32,4 +35,4 @@ const Jumbotron = ({ children, image }: Props) => {
    );
 };
 
-export default Jumbotron;
+export default SubJumbotron;

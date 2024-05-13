@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ContentBlock from "../components/ContentBlock";
+import ContentBlock from "../ContentBlocks/ContentBlock";
 import ExtraBlock from "../components/ExtraBlock";
-import Jumbotron from "../components/SubJumbotron";
+import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 import PrimaryButton from "../components/PrimaryButton";
 import ProductBlock from "../components/ProductBlock";
 import PromoBlock from "../components/PromoBlock";
@@ -10,7 +10,7 @@ import { jumbotronBackground_1 } from "../theme";
 const Services = () => {
    return (
       <>
-         <Jumbotron image={jumbotronBackground_1}>SERVICES</Jumbotron>
+         <SubJumbotron image={jumbotronBackground_1}>SERVICES</SubJumbotron>
          <PromoBlock title="PHOTOGRAPH PROMOS"></PromoBlock>
          <ContentBlock
             heading={"We accept Painting request as well!"}

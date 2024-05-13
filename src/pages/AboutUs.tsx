@@ -1,7 +1,6 @@
-import ContentBlock from "../components/ContentBlock";
-import ContentBlockVertical from "../components/ContentBlockVertical";
+import { ContentBlock, ContentBlockVertical } from "../ContentBlocks";
 import EmployeeBlock from "../components/EmployeeBlock";
-import Jumbotron from "../components/SubJumbotron";
+import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 
 const AboutUs = () => {
    const family = [
@@ -19,8 +18,17 @@ const AboutUs = () => {
 
    return (
       <>
-         <Jumbotron image="src/assets/jumbotron_image.jpg">ABOUT US</Jumbotron>
-         <ContentBlock heading="OUR JOURNEY" reverseToggle={false}>
+         <SubJumbotron image="src/assets/jumbotron_image.jpg">
+            ABOUT US
+         </SubJumbotron>
+         <ContentBlock
+            heading="OUR JOURNEY"
+            reverseToggle={false}
+            image={{
+               src: "src/assets/journey_image.jpg",
+               alt: "Journey Image",
+            }}
+         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
             tincidunt arcu non sodales neque.

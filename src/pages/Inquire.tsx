@@ -1,6 +1,6 @@
 import { Box, HStack, Heading, Icon, Text, VStack } from "@chakra-ui/react";
 import { BsGeoAlt } from "react-icons/bs";
-import Jumbotron from "../components/SubJumbotron";
+import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 import {
    defaultContainerSize,
    projectColorPrimary,
@@ -13,7 +13,7 @@ import {
 const Inquire = () => {
    return (
       <>
-         <Jumbotron image={jumbotronBackground_1}>INQUIRE</Jumbotron>
+         <SubJumbotron image={jumbotronBackground_1}>INQUIRE</SubJumbotron>
          <Box bgColor={projectColorPrimary}>
             <VStack
                spacing={5}
