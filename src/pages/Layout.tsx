@@ -7,11 +7,6 @@ import { projectColorTertiary } from "../theme";
 import { BsChevronUp } from "react-icons/bs";
 
 const Layout = () => {
-   // const { pathname } = useLocation();
-   // useEffect(() => {
-   //   window.scrollTo({ top: 0, behavior: "smooth" });
-   // }, [pathname]);
-
    const { isTop } = useTop(true);
 
    return (

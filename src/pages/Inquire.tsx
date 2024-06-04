@@ -8,6 +8,7 @@ import {
    projectColorTertiary,
    jumbotronBackground_1,
 } from "../theme";
+import { BsEnvelope, BsCalendar2Check } from "react-icons/bs";
 
 // TODO: Make a Placeholder first while the iframe is not avaialable yet
 const Inquire = () => {
@@ -40,13 +41,18 @@ const Inquire = () => {
                      <Heading size="md" color={projectColorSecondary}>
                         STORE HOURS:
                      </Heading>
-                     <Text>We are open from Monday to Friday, 9:00 AM to 5:00 PM.</Text>
+                     <Text>
+                        <Icon as={BsCalendar2Check} color={projectColorTertiary} /> We are open from
+                        Monday to Friday, 9:00 AM to 5:00 PM.
+                     </Text>
                   </VStack>
                   <VStack alignItems={"start"}>
                      <Heading size="md" color={projectColorSecondary}>
                         CONTACT US AT:
                      </Heading>
-                     <Text>studiomix1@gmail.com</Text>
+                     <Text>
+                        <Icon as={BsEnvelope} color={projectColorTertiary} /> studiomix1@gmail.com
+                     </Text>
                   </VStack>
                </SimpleGrid>
             </VStack>

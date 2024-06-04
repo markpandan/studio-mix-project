@@ -7,6 +7,8 @@ import Layout from "./pages/Layout";
 import Services from "./pages/Services";
 import Post from "./pages/Post";
 import Products from "./pages/Products";
+import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const router = createBrowserRouter([
    {
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
          { path: "inquire", element: <Inquire /> },
          { path: "post/:id", element: <Post /> },
          { path: "products", element: <Products /> },
+         { path: "careers", element: <Careers /> },
+         { path: "privacy-policy", element: <PrivacyPolicy /> },
       ],
    },
 ]);
