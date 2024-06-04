@@ -2,6 +2,7 @@ import { Badge, Box, HStack, Heading, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import dbGenres from "../../pseudo_db/dbGenres.json";
 import { imageObj } from "../../helpers/types";
+import { imageDescriptionBgColor, imageDescriptionTxtColor } from "../../theme";
 
 // interface ProposedProps {
 //   index: { key: number; hoverKey: number };
@@ -21,13 +22,7 @@ interface Props {
 // TODO: Implement Lazy loading for the images.
 // TODO: Descale the images first. While in that event, place a Skeleton component as a placeholder first.
 // TODO: De-nest the genres array variable
-const CollageCard = ({
-   index,
-   height,
-   image,
-   hoverIndex,
-   setHoverIndex,
-}: Props) => {
+const CollageCard = ({ index, height, image, hoverIndex, setHoverIndex }: Props) => {
    const navigate = useNavigate();
    return (
       <Box
@@ -59,21 +54,16 @@ const CollageCard = ({
             bottom={0}
             width="100%"
             height="75px"
-            backgroundColor={"whiteAlpha.400"}
-            transform={
-               index == hoverIndex ? "translateY(0)" : "translateY(100%)"
-            }
+            backgroundColor={imageDescriptionBgColor}
+            color={imageDescriptionTxtColor}
+            transform={index == hoverIndex ? "translateY(0)" : "translateY(100%)"}
             transition="transform .45s ease-out"
             paddingX={[2, 4]}
             paddingY={2}
          >
             <HStack>
                {image.genres.map((genre, index) => (
-                  <Badge
-                     key={index}
-                     variant="subtle"
-                     colorScheme={dbGenres["Genres"][genre].color}
-                  >
+                  <Badge key={index} variant="subtle" colorScheme={dbGenres["Genres"][genre].color}>
                      {dbGenres["Genres"][genre].tag}
                   </Badge>
                ))}

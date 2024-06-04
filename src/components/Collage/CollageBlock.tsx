@@ -17,14 +17,7 @@ const CollageBlock = () => {
       setHeights(
          Array(images.length)
             .fill(null)
-            .map(
-               () =>
-                  randHeight[
-                     Math.floor(
-                        Math.random() * (randHeight.length - 1 - 0 + 1) + 0
-                     )
-                  ]
-            )
+            .map(() => randHeight[Math.floor(Math.random() * (randHeight.length - 1 - 0 + 1) + 0)])
       );
    }, []);
 
@@ -34,9 +27,7 @@ const CollageBlock = () => {
             <Heading mb={4} color={projectColorSecondary}>
                MORE IMAGES
             </Heading>
-            <ResponsiveMasonry
-               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}
-            >
+            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
                <Masonry gutter="1.5rem">
                   {heights.map((height, index) => (
                      <CollageCard

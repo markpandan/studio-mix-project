@@ -4,6 +4,7 @@ import Props from "./props";
 import "../index.css";
 
 const ContentBlock = ({
+   id,
    children,
    heading,
    reverseToggle,
@@ -11,7 +12,7 @@ const ContentBlock = ({
    image,
 }: Props) => {
    return (
-      <Box bgColor={primaryColor ? projectColorPrimary : "gray.100"}>
+      <Box id={id} bgColor={primaryColor ? projectColorPrimary : "gray.100"}>
          <Box className="defaultContainerFormat">
             <Stack
                direction={{

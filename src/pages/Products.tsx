@@ -5,11 +5,7 @@ import Pagination from "../components/Pagination";
 import ProductCard from "../components/ProductCard";
 import { products } from "../helpers/getdb";
 import { productObj } from "../helpers/types";
-import {
-   defaultContainerSize,
-   projectColorPrimary,
-   jumbotronBackground_1,
-} from "../theme";
+import { defaultContainerSize, projectColorPrimary, jumbotronBackground_1 } from "../theme";
 
 const count = products.length;
 const limit = 8;
@@ -35,7 +31,7 @@ const Products = () => {
                spacing={10}
                py={[5, 10]}
             >
-               <SimpleGrid columns={[1, 2, 4]} spacing={5}>
+               <SimpleGrid columns={[1, 2, 4]} spacing={5} minHeight={"700px"} alignItems={"start"}>
                   {displayedProducts.map((item, i) => (
                      <ProductCard
                         key={i}

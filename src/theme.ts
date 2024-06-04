@@ -10,6 +10,9 @@ export const projectColorPrimary = "yellow.300";
 export const projectColorSecondary = "purple.500";
 export const projectColorTertiary = "red.500";
 
+export const imageDescriptionBgColor = "blackAlpha.400";
+export const imageDescriptionTxtColor = "gray.300";
+
 export const buttonFont = "'Alatsi', sans-serif";
 
 export const jumbotronBackground_1 = "src/assets/jumbotron_image.jpg";

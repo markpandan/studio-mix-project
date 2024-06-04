@@ -17,9 +17,6 @@ const ContentBlockVertical = ({
                direction={reverseToggle ? "column-reverse" : "column"}
                spacing={10}
             >
-               <Heading mb={4} color={"purple.500"}>
-                  {heading}
-               </Heading>
                {image ? (
                   <Image
                      h={"xs"}
@@ -32,6 +29,9 @@ const ContentBlockVertical = ({
                ) : (
                   <Skeleton height={"xs"} width={"100%"} borderRadius={20} />
                )}
+               <Heading mb={4} color={"purple.500"}>
+                  {heading}
+               </Heading>
                <Text> {children}</Text>
             </VStack>
          </Box>

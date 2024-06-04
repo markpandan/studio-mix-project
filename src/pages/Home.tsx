@@ -27,17 +27,18 @@ const Home = () => {
    // TODO: Place a background on the first box
    return (
       <>
-         <MainJumbotron image="src/assets/sunset_wallpaper.jpg">
+         <MainJumbotron id_focus="test" image="src/assets/sunset_wallpaper.jpg">
             <Heading fontSize={["5xl", "7xl"]} fontWeight={"bold"}>
                Review Your Memories!
             </Heading>
-            <hr style={{ width: "75%" }} />
+            <hr style={{ width: "95%", margin: "auto" }} />
             <Text fontSize={["xl", "3xl"]}>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+               incididunt ut labore et dolore magna aliqua.
             </Text>
          </MainJumbotron>
          <ContentBlock
+            id="test"
             heading="WE PRODUCE MEMORY LASTING IMAGES!"
             reverseToggle={false}
             image={{
@@ -45,14 +46,13 @@ const Home = () => {
                alt: "Photo Paper Image",
             }}
          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
-            tincidunt arcu non sodales neque.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
-            porttitor eget dolor morbi. Feugiat nisl pretium fusce id velit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor morbi.
+            Feugiat nisl pretium fusce id velit.
          </ContentBlock>
          <PromoBlock contents={cardContents} />
          <ContentBlock
@@ -63,14 +63,13 @@ const Home = () => {
                alt: "Capture Image",
             }}
          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
-            tincidunt arcu non sodales neque.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
-            porttitor eget dolor morbi. Feugiat nisl pretium fusce id velit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor morbi.
+            Feugiat nisl pretium fusce id velit.
          </ContentBlock>
       </>
    );

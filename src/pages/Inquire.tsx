@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Icon, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Heading, Icon, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { BsGeoAlt } from "react-icons/bs";
 import SubJumbotron from "../components/Jumbotrons/SubJumbotron";
 import {
@@ -15,12 +15,7 @@ const Inquire = () => {
       <>
          <SubJumbotron image={jumbotronBackground_1}>INQUIRE</SubJumbotron>
          <Box bgColor={projectColorPrimary}>
-            <VStack
-               spacing={5}
-               maxW={defaultContainerSize}
-               margin={"auto"}
-               py={5}
-            >
+            <VStack spacing={5} maxW={defaultContainerSize} margin={"auto"} py={5}>
                <Heading color={projectColorSecondary} alignSelf={"start"}>
                   OUR LOCATION
                </Heading>
@@ -33,13 +28,27 @@ const Inquire = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                />
-               <HStack>
-                  <Icon as={BsGeoAlt} color={projectColorTertiary}></Icon>
-                  <Text>
-                     Dr Arcadio Santos Ave, San Antonio, Parañaque, 1700 Metro
-                     Manila
-                  </Text>
-               </HStack>
+               <SimpleGrid columns={[1, 2]} width={"100%"}>
+                  <VStack alignItems={"start"}>
+                     <Heading size="md" color={projectColorSecondary}>
+                        ADDRESS:
+                     </Heading>
+                     <Text>
+                        <Icon as={BsGeoAlt} color={projectColorTertiary} /> Dr Arcadio Santos Ave,
+                        San Antonio, Parañaque, 1700 Metro Manila
+                     </Text>
+                     <Heading size="md" color={projectColorSecondary}>
+                        STORE HOURS:
+                     </Heading>
+                     <Text>We are open from Monday to Friday, 9:00 AM to 5:00 PM.</Text>
+                  </VStack>
+                  <VStack alignItems={"start"}>
+                     <Heading size="md" color={projectColorSecondary}>
+                        CONTACT US AT:
+                     </Heading>
+                     <Text>studiomix1@gmail.com</Text>
+                  </VStack>
+               </SimpleGrid>
             </VStack>
          </Box>
       </>

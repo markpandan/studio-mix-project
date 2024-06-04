@@ -13,7 +13,8 @@ const CollageCardDetails = ({ index, hoverIndex }: Props) => {
          bottom={0}
          width="100%"
          height="75px"
-         backgroundColor={"whiteAlpha.400"}
+         backgroundColor={"blackAlpha.400"}
+         color={"white"}
          transform={index == hoverIndex ? "translateY(0)" : "translateY(100%)"}
          transition="transform .45s ease-out"
          paddingX={[2, 4]}
